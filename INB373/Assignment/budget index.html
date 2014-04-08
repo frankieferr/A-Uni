@@ -169,10 +169,48 @@
 			text-align: center;
 		}
 
-		input.search-box{
-			width:40%;
+		input[type="text"],
+		textarea.form-textarea {
 			box-shadow: none;
 			padding: 3px;
+		}
+
+		input.search-box{
+			width:40%;
+		}
+
+		textarea.form-textarea {
+			height:100px;
+			width:100%;
+		}
+
+		div.form-row {
+			width:100%;
+			padding:2px 15%;
+		}
+
+		div.form-row > div:nth-child(1) {
+			width:20%;
+			float: left;
+		}
+		div.form-row > div:nth-child(2) {
+			width:50%;
+			float: left;
+		}
+
+		div.new-budget-form {
+			padding-top:15px;
+			margin:0px 50px;
+			border: 2px solid #B8C6FE; 
+		}
+
+		div.form-buttons {
+			text-align: center;
+			padding-top: 10px;
+		}
+
+		.half-width {
+			width: 50%;
 		}
 		/*#B8C6FE*/
 
@@ -233,6 +271,31 @@
 			<td>
 				<!-- WHAT TO COPY -->
 				<h2 class="body-header">Budgets <button class="btn btn-blue btn-add">+</button></h2>
+				<div class="new-budget-form">
+					<form>
+						<div class="form-row">
+							<div>
+								<label>Budget Name:</label>
+							</div>
+							<div>
+								<input type="text" name="budget[name]" class="half-width">
+							</div>
+							<div style="clear:both"></div>
+						</div>
+						<div class="form-row">
+							<div>
+								<label>Description:</label>
+							</div>
+							<div>
+								<textarea class="form-textarea" name="budget[description]"></textarea>
+							</div>
+							<div style="clear:both"></div>
+						</div>
+						<div class="form-buttons">
+							<button class="btn btn-green">Create</button><button class="btn btn-red">Cancel</button>
+						</div>
+					</form>
+				</div>
 				<div class="search-area">
 					<label>Search</label>
 					<input class="search-box" type="text" placeholder="Search for a Budget Name">
