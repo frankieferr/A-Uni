@@ -1,0 +1,19 @@
+﻿body {
+    background-color: #F8F0FF;
+}
+
+h1#title {
+    text-align: center;
+    font-size: 3em;
+}
+
+div#NavBar {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+div#header {
+    background-color: #B8C6FE;
+}
+

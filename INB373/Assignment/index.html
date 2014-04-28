@@ -1,0 +1,222 @@
+<head>
+	<style type="text/css">
+		body {
+			padding: 5px 20px;
+			background-color:#FFFFFF;
+			font-family:Georgia,Serif,"Times New Roman";
+		}
+		table.banner {
+			background-color: white;
+			text-align: center;
+			width: 100%;
+			padding-top: 20px;
+		}
+
+		img.banner {
+			width:100%; 
+			height:100px
+		}
+
+		div.top-nav {
+			float: right;
+			display: inline-flex;
+		}
+
+		.pull-right {
+			float: right;
+		}
+
+		table.footer {
+			text-align: center;
+			width: 100%;
+		}
+
+		table.main {
+			width: 100%;
+			padding:20px 0px 50px 0px;
+		}
+		td.sidebar {
+			width:15%;
+			vertical-align: top;
+			padding-right: 10px;
+		}
+
+		td.content {
+			width:85%;
+			vertical-align: top;
+			padding-left:10px;
+		}
+
+		div.sidebar-link-container {
+			width: 100%;
+			margin: 1px 0px;
+			padding:5px 0px;
+			text-indent: 10px;
+		}
+
+		div.sign-in-link-container {
+			width: 100px;
+			text-align: center;
+		}
+
+		div.link-container {
+			border: 1px solid red;
+			border-radius:25px;
+		}
+
+		a.nav-link {
+			margin-left: 10px;
+			text-decoration: none;
+			width:100%;
+		}
+
+		div.sign-in-container {
+			height: 200px;
+			width: 350px;
+			border: 1px solid red;
+			margin: auto;
+			text-align: center;
+		}
+
+		h3.content-header {
+			text-align: center;
+		}
+
+		form.sign-in-form {
+			margin: 40px 0px;
+		}
+
+		form.sign-in-form > table {
+			width:100%;
+		}
+
+		form.sign-in-form td {
+			padding: 6px 0px;
+		}
+
+		form.sign-in-form td:nth-child(1) {
+			width:30%;
+			text-align: right;
+		}
+
+		form.sign-in-form td:nth-child(2) {
+			width:70%;
+			text-align: left;
+		}
+
+		form.sign-in-form input[type='text'],
+		form.sign-in-form input[type='password'] {
+			width: 90%;
+	    box-shadow: none;
+	    padding: 3px;
+		}
+
+		form.sign-in-form input[type='submit'] {
+			margin-top: 6px;
+		}
+
+		.btn {
+			border: none;
+			border-radius: 15px;
+			padding: 7px 12px;
+		}
+
+		.btn-green {
+			background-color: green;
+			color:white;
+		}
+
+		a.nav-link:link {color:green;}      /* unvisited link */
+		a.nav-link:visited {color:green;}  /* visited link */
+		a.nav-link:hover {color:green;}  /* mouse over link */
+		a.nav-link:active {color:green;}  /* selected link */
+	</style>
+</head>
+<body>
+
+	<table class="banner">
+		<tr>
+			<td>
+				<img src="budgetsrus.jpg" alt="Company Banner" class="banner"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="top-nav">
+					<a href="#" class="nav-link">
+						<div class="link-container sign-in-link-container">
+							Sign in
+						</div>
+					</a>
+					<a href="#" class="nav-link">
+						<div class="link-container sign-in-link-container">
+							Sign up
+						</div>
+					</a>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<table class="main">
+		<tr>
+			<td class="sidebar">
+				<a href="#" class="nav-link">
+					<div class="sidebar-link-container link-container">
+						Home
+					</div>
+				</a>
+				
+				<a href="#" class="nav-link">
+					<div class="sidebar-link-container link-container">
+						Budgets
+					</div>
+				</a>
+				<a href="#" class="nav-link">
+					<div class="sidebar-link-container link-container">
+						Goals
+					</div>
+				</a>
+			</td>
+
+			<td class="content">
+				<h3 class="content-header"> Sign In </h3>
+				<div class="sign-in-container">
+					<form class="sign-in-form">
+						<table>
+							<tr>
+								<td>
+									<label>Username:</label>
+								</td>
+								<td>
+									<input type="text" name="username" placeholder="Username">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Password:</label>
+								</td>
+								<td>
+									<input type="password" placeholder="Password" name="password">
+								</td>
+							</tr>
+						</table>
+
+						<input type="submit" value="Sign In" class="btn btn-green">
+					<form>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+
+
+	<table class="footer">
+		<tr>
+			<td>
+				Copyright @2014 Budgets'R'Us
+			</td>
+		</tr>
+	</table>
+
+</body>
