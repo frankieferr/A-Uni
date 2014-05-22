@@ -1,0 +1,13 @@
+In order to run both the TAM and the LCD simultaneously, it was necessary to implement using multitasking techniques. As a group we decided to do so using microCOS pre-emptive multitasking kernel.
+
+The purpose of the main function is to initialise various variables, the TAM and the LCD as well starting three particular tasks.
+
+The three tasks are: ButtonWatch, TAMRunner and MenuManager.
+ButtonWatch is the task that watches and waits for a button to be pressed to either start or stop the TAM. When the stopped button is pressed a flag is set to tell the TAM to stop. When the start button is pressed the TAM is started up again and the flag is then reset to false.
+TAMRunner is the task which runs the TAM, constantly waiting for an object to be present and once it is, to test it, store the results and determine whether to accept or reject it. On top of that, TAMRunner is constantly checking to see if the flag is set to terminate itself.
+MenuManager is the tasks which runs the different menus on the LCD screen, taking input from the user and outputting the requested information depending on the user's input.
+
+These tasks need to share resources in order to achieve the requirements. The resources include the settings and the queue. TAMRunner and MenuManager both need to access the queue. TAMRunner writes to the queue and MenuManager reads from the queue. 
+Furthermore all three tasks need to access the settings struct. TAMRunner needs to read the settings to check whether to accept or reject the object depending on its height and the low and high threshold. MenuManager needs to read the settings to display them and ButtonWatch needs to override the settings with the new one once the user restarts the TAM.
+
+Because of this the use of mutexes was necessary. We used two mutexes, one for each shared resource, the queue and the settings. Whenever one of the task was reading or writing to one of these shared resources, the mutex for that particular resource was requested in order to lock that resource until that task was done with it and then releases it for other tasks to use.
